@@ -10,42 +10,32 @@
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
   --verde:#1D9E75;--verde-dark:#0F6E56;--verde-light:#E1F5EE;
-  --amarillo:#EF9F27;--rojo:#E24B4A;--azul:#378ADD;--morado:#534AB7;
+  --amarillo:#EF9F27;--rojo:#E24B4A;--azul:#378ADD;
   --bg:#F7F8FA;--card:#fff;--border:#E4E6EA;--text:#1A1A2E;--muted:#6B7280;
   --font:'Segoe UI',system-ui,sans-serif;--mono:'Courier New',monospace;
   --radius:12px;--shadow:0 1px 4px rgba(0,0,0,0.08);
 }
 body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100vh}
-
-/* HEADER */
 .app-header{background:var(--verde);color:#fff;padding:14px 16px;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:50;box-shadow:0 2px 8px rgba(0,0,0,0.15)}
 .app-header .icon{width:36px;height:36px;background:rgba(255,255,255,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px}
 .app-header h1{font-size:16px;font-weight:600}
 .app-header p{font-size:11px;opacity:.8}
 .conn-dot{width:10px;height:10px;border-radius:50%;background:#fff;margin-left:auto;opacity:.4;flex-shrink:0}
 .conn-dot.ok{background:#4ade80;opacity:1}
-.conn-dot.err{background:#f87171;opacity:1}
-
-/* TABS */
 .tabs{display:flex;background:#fff;border-bottom:1px solid var(--border);position:sticky;top:64px;z-index:40}
 .tab{flex:1;padding:12px 4px;text-align:center;font-size:12px;cursor:pointer;border:none;background:transparent;color:var(--muted);border-bottom:2px solid transparent;font-family:var(--font)}
 .tab.active{color:var(--verde);border-bottom-color:var(--verde);font-weight:600}
 .tab i{display:block;font-size:18px;margin-bottom:2px}
-
-/* CONTENT */
 .content{padding:14px;max-width:640px;margin:0 auto}
 .card{background:var(--card);border-radius:var(--radius);border:1px solid var(--border);padding:14px 16px;margin-bottom:12px;box-shadow:var(--shadow)}
-.section-label{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.section-label{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
 .form-full{grid-column:1/-1}
 .field label{display:block;font-size:12px;color:var(--muted);margin-bottom:4px}
-.field input,.field select,.field textarea{width:100%;padding:9px 11px;font-size:14px;border:1px solid var(--border);border-radius:8px;background:#fff;color:var(--text);font-family:var(--font);transition:border .15s}
+.field input,.field select,.field textarea{width:100%;padding:9px 11px;font-size:14px;border:1px solid var(--border);border-radius:8px;background:#fff;color:var(--text);font-family:var(--font)}
 .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--verde)}
 .field textarea{resize:vertical;min-height:56px}
-
-/* FOTOS */
-.photo-zone{border:2px dashed var(--border);border-radius:var(--radius);padding:16px;text-align:center;cursor:pointer;background:var(--bg);transition:background .15s;position:relative}
-.photo-zone:hover{background:var(--verde-light)}
+.photo-zone{border:2px dashed var(--border);border-radius:var(--radius);padding:16px;text-align:center;cursor:pointer;background:var(--bg);position:relative}
 .photo-zone input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
 .photo-zone i{font-size:28px;color:var(--muted);display:block;margin-bottom:4px}
 .photo-zone span{font-size:13px;color:var(--muted)}
@@ -58,40 +48,27 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
 .photo-badge{position:absolute;bottom:3px;left:3px;background:rgba(0,0,0,0.5);color:#fff;font-size:10px;padding:1px 5px;border-radius:3px}
 .cam-wrap{display:none;margin-top:8px;border-radius:var(--radius);overflow:hidden;background:#000}
 .cam-wrap video{width:100%;display:block;max-height:220px;object-fit:cover}
-.cam-controls{display:flex;gap:8px;margin-top:8px;justify-content:center;padding:0 0 4px}
-
-/* GEO */
+.cam-controls{display:flex;gap:8px;margin-top:8px;justify-content:center;padding-bottom:4px}
 .geo-btn{display:flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;background:var(--bg);cursor:pointer;font-size:13px;color:var(--text);width:100%;font-family:var(--font)}
-.geo-btn:hover{background:var(--verde-light)}
 .geo-ok{margin-top:6px;padding:8px 10px;background:var(--verde-light);border-radius:8px;font-size:12px;color:var(--verde-dark);display:none}
-
-/* BOTONES */
-.btn{display:flex;align-items:center;justify-content:center;gap:7px;padding:11px 16px;border:none;border-radius:8px;font-size:14px;font-weight:500;cursor:pointer;font-family:var(--font);width:100%;margin-top:10px;transition:background .15s}
-.btn-primary{background:var(--verde);color:#fff}.btn-primary:hover{background:var(--verde-dark)}
+.btn{display:flex;align-items:center;justify-content:center;gap:7px;padding:11px 16px;border:none;border-radius:8px;font-size:14px;font-weight:500;cursor:pointer;font-family:var(--font);width:100%;margin-top:10px}
+.btn-primary{background:var(--verde);color:#fff}
 .btn-primary:disabled{background:#9FE1CB;cursor:not-allowed}
-.btn-secondary{background:var(--bg);color:var(--text);border:1px solid var(--border)}.btn-secondary:hover{background:var(--verde-light)}
-.btn-purple{background:var(--morado);color:#fff}
-.btn-blue{background:var(--azul);color:#fff}
+.btn-secondary{background:var(--bg);color:var(--text);border:1px solid var(--border)}
 .btn-sm{padding:5px 10px;font-size:12px;border:1px solid var(--border);border-radius:6px;background:var(--bg);cursor:pointer;color:var(--text);display:inline-flex;align-items:center;gap:4px;font-family:var(--font)}
-
-/* PROGRESS */
 .progress{height:3px;background:var(--verde-light);border-radius:2px;margin-top:8px;display:none}
 .progress-bar{height:100%;background:var(--verde);border-radius:2px;width:0;transition:width .3s}
-
-/* STATS */
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}
 .stat{background:var(--card);border-radius:var(--radius);border:1px solid var(--border);padding:12px;text-align:center}
 .stat-val{font-size:24px;font-weight:700;color:var(--verde)}
 .stat-label{font-size:11px;color:var(--muted);margin-top:2px}
-
-/* ACTIVOS */
-.asset-card{background:var(--card);border-radius:var(--radius);border:1px solid var(--border);overflow:hidden;margin-bottom:10px;box-shadow:var(--shadow)}
+.asset-card{background:var(--card);border-radius:var(--radius);border:1px solid var(--border);overflow:hidden;margin-bottom:10px}
 .asset-photos{display:flex;gap:3px;padding:8px 8px 0;overflow-x:auto}
 .asset-photo{width:68px;height:68px;flex-shrink:0;border-radius:6px;overflow:hidden;border:1px solid var(--border)}
 .asset-photo img{width:100%;height:100%;object-fit:cover}
 .no-photo{width:68px;height:68px;flex-shrink:0;border-radius:6px;background:var(--bg);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:22px}
 .asset-body{padding:10px 12px}
-.asset-name{font-size:15px;font-weight:600;color:var(--text);margin-bottom:3px}
+.asset-name{font-size:15px;font-weight:600;margin-bottom:3px}
 .asset-code{font-size:11px;font-family:var(--mono);color:var(--verde);background:var(--verde-light);padding:2px 7px;border-radius:4px}
 .asset-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
 .meta{font-size:11px;color:var(--muted);display:flex;align-items:center;gap:3px}
@@ -100,41 +77,28 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
 .badge-ok{background:var(--verde-light);color:var(--verde-dark)}
 .badge-reg{background:#FEF3C7;color:#92400E}
 .badge-mal{background:#FEE2E2;color:#991B1B}
-.sync-ok{background:var(--verde-light);color:var(--verde-dark)}
-.sync-pend{background:#FEF3C7;color:#92400E}
-.sync-err{background:#FEE2E2;color:#991B1B}
-
-/* CONFIG */
+.sync-ok{background:var(--verde-light);color:var(--verde-dark);font-size:10px}
+.sync-pend{background:#FEF3C7;color:#92400E;font-size:10px}
+.sync-err{background:#FEE2E2;color:#991B1B;font-size:10px}
 .config-status{display:flex;align-items:center;gap:8px;padding:10px 12px;border-radius:8px;font-size:13px;margin-bottom:12px}
 .status-idle{background:var(--bg);color:var(--muted)}
 .status-ok{background:var(--verde-light);color:var(--verde-dark)}
-.status-err{background:#FEE2E2;color:#991B1B}
-
-/* QR MODAL */
 .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);align-items:center;justify-content:center;z-index:100;padding:16px}
 .modal.open{display:flex}
 .modal-box{background:var(--card);border-radius:var(--radius);padding:20px;max-width:300px;width:100%;text-align:center}
 .modal-title{font-size:15px;font-weight:600;margin-bottom:14px}
 .qr-wrap{width:180px;height:180px;margin:0 auto 12px;background:#fff;display:flex;align-items:center;justify-content:center;border-radius:8px;border:1px solid var(--border)}
-.modal-code{font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:14px}
 .modal-actions{display:flex;gap:8px;justify-content:center}
-
-/* LIGHTBOX */
 .lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.9);z-index:200;align-items:center;justify-content:center;flex-direction:column}
 .lb.open{display:flex}
 .lb img{max-width:90vw;max-height:80vh;border-radius:8px;object-fit:contain}
 .lb-close{position:absolute;top:16px;right:16px;background:rgba(255,255,255,0.15);border:none;color:#fff;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center}
-.lb-cap{color:#fff;font-size:13px;margin-top:10px;opacity:.8}
-
-/* TOAST */
-.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--verde);color:#fff;padding:10px 20px;border-radius:8px;font-size:13px;z-index:300;display:none;align-items:center;gap:8px;white-space:nowrap;box-shadow:0 4px 12px rgba(0,0,0,0.2)}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--verde);color:#fff;padding:10px 20px;border-radius:8px;font-size:13px;z-index:300;display:none;align-items:center;gap:8px;white-space:nowrap}
 .toast.show{display:flex}
 .toast.toast-err{background:var(--rojo)}
-
 .empty{text-align:center;padding:2.5rem 1rem;color:var(--muted);font-size:14px}
 .empty i{font-size:36px;display:block;margin-bottom:8px;opacity:.4}
 .search-inp{width:100%;padding:10px 12px;font-size:14px;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--text);font-family:var(--font);margin-bottom:12px}
-.search-inp:focus{outline:none;border-color:var(--verde)}
 </style>
 </head>
 <body>
@@ -145,7 +109,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
     <h1>Inventario de Activos Fijos</h1>
     <p id="empresa-label">CONSULCUENCA CIA. LTDA.</p>
   </div>
-  <div class="conn-dot" id="conn-dot" title="Estado de conexión"></div>
+  <div class="conn-dot" id="conn-dot"></div>
 </header>
 
 <nav class="tabs">
@@ -155,14 +119,14 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
   <button class="tab" onclick="showTab('exportar')"><i class="ti ti-download"></i>Exportar</button>
 </nav>
 
-<!-- ══ CONFIG ══ -->
+<!-- CONFIG -->
 <div id="tab-config" class="content">
   <div class="card">
     <div class="section-label"><i class="ti ti-link"></i> Conexión con Google Sheets</div>
     <div class="config-status status-idle" id="cfg-status">
       <i class="ti ti-point-filled"></i> Sin configurar — pega tu URL para activar
     </div>
-    <div class="form-grid" style="margin-bottom:0">
+    <div class="form-grid">
       <div class="field form-full">
         <label>URL de Apps Script (termina en /exec)</label>
         <input type="text" id="cfg-url" placeholder="https://script.google.com/macros/s/XXXXX/exec" oninput="guardarCfg()"/>
@@ -175,7 +139,6 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
     <button class="btn btn-primary" onclick="probarConexion()" style="margin-top:12px">
       <i class="ti ti-plug"></i> Probar conexión
     </button>
-    <div class="progress" id="cfg-prog"><div class="progress-bar" id="cfg-bar"></div></div>
   </div>
   <div class="card">
     <div class="section-label"><i class="ti ti-help-circle"></i> Cómo obtener la URL</div>
@@ -189,7 +152,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
   </div>
 </div>
 
-<!-- ══ REGISTRO ══ -->
+<!-- REGISTRO -->
 <div id="tab-registro" class="content" style="display:none">
   <div class="card">
     <div class="section-label"><i class="ti ti-info-circle"></i> Identificación del activo</div>
@@ -219,7 +182,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
       <div class="field"><label>Responsable</label><input type="text" id="f-responsable" placeholder="Nombre completo"/></div>
       <div class="field"><label>Departamento</label><input type="text" id="f-departamento" placeholder="Contabilidad"/></div>
       <div class="field"><label>Ciudad</label><input type="text" id="f-ciudad" value="Cuenca"/></div>
-      <div class="field form-full"><label>Ubicación (piso / sala)</label><input type="text" id="f-ubicacion" placeholder="Piso 2 - Sala de reuniones"/></div>
+      <div class="field form-full"><label>Ubicación</label><input type="text" id="f-ubicacion" placeholder="Piso 2 - Sala de reuniones"/></div>
       <div class="field form-full"><label>Observaciones</label><textarea id="f-obs" placeholder="Estado físico, accesorios..."></textarea></div>
     </div>
   </div>
@@ -266,30 +229,29 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
   <div class="progress" id="save-prog"><div class="progress-bar" id="save-bar"></div></div>
 </div>
 
-<!-- ══ INVENTARIO ══ -->
+<!-- INVENTARIO -->
 <div id="tab-inventario" class="content" style="display:none">
   <div class="stats">
     <div class="stat"><div class="stat-val" id="st-total">0</div><div class="stat-label">Activos</div></div>
     <div class="stat"><div class="stat-val" id="st-valor">$0</div><div class="stat-label">Valor total</div></div>
     <div class="stat"><div class="stat-val" id="st-sync">0/0</div><div class="stat-label">Sincronizados</div></div>
   </div>
-  <input class="search-inp" type="text" id="buscador" placeholder="Buscar por nombre, código o área..." oninput="renderInv()"/>
+  <input class="search-inp" type="text" id="buscador" placeholder="Buscar..." oninput="renderInv()"/>
   <div id="lista-activos"></div>
   <button class="btn btn-secondary" id="btn-resinc" onclick="reenviarPendientes()" style="display:none">
     <i class="ti ti-refresh"></i> Reintentar envío de pendientes
   </button>
 </div>
 
-<!-- ══ EXPORTAR ══ -->
+<!-- EXPORTAR -->
 <div id="tab-exportar" class="content" style="display:none">
   <div class="card">
     <div class="section-label"><i class="ti ti-file-spreadsheet"></i> Exportar CSV</div>
-    <p style="font-size:13px;color:var(--muted);margin-bottom:10px">Descarga todos los activos en formato Excel / CSV como respaldo.</p>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:10px">Descarga todos los activos como respaldo.</p>
     <button class="btn btn-primary" onclick="exportCSV()" style="margin-top:0"><i class="ti ti-table-export"></i> Descargar CSV</button>
   </div>
   <div class="card">
     <div class="section-label"><i class="ti ti-qrcode"></i> Ver ficha de activo</div>
-    <p style="font-size:13px;color:var(--muted);margin-bottom:10px">Abre la ficha pública de un activo en Google Sheets.</p>
     <div style="display:flex;gap:8px">
       <input type="text" id="preview-cod" placeholder="Código: AF-001" class="search-inp" style="margin:0;flex:1"/>
       <button class="btn-sm" onclick="abrirFicha()" style="padding:10px 14px;font-size:13px"><i class="ti ti-external-link"></i> Abrir</button>
@@ -302,7 +264,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
   <div class="modal-box">
     <div class="modal-title" id="qr-title">Código QR</div>
     <div class="qr-wrap" id="qr-wrap"></div>
-    <div class="modal-code" id="qr-label"></div>
+    <div style="font-size:11px;font-family:var(--mono);color:var(--muted);margin-bottom:14px" id="qr-label"></div>
     <div class="modal-actions">
       <button class="btn-sm" onclick="document.getElementById('qr-modal').classList.remove('open')">Cerrar</button>
       <button class="btn-sm" style="background:var(--verde);color:#fff;border:none" onclick="dlQR()"><i class="ti ti-download"></i> PNG</button>
@@ -313,15 +275,13 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
 <!-- LIGHTBOX -->
 <div class="lb" id="lb" onclick="document.getElementById('lb').classList.remove('open')">
   <button class="lb-close"><i class="ti ti-x"></i></button>
-  <img id="lb-img" src="" alt="Foto del activo"/>
-  <div class="lb-cap" id="lb-cap"></div>
+  <img id="lb-img" src="" alt="Foto"/>
 </div>
 
 <!-- TOAST -->
 <div class="toast" id="toast"></div>
 
 <script>
-// ── ESTADO ──────────────────────────────────────────────
 let activos = [];
 let fotosActuales = [];
 let streamCam = null;
@@ -329,7 +289,7 @@ let qrCanvas = null;
 let scriptUrl = '';
 let empresa = '';
 
-try { activos = JSON.parse(localStorage.getItem('activos_v4')||'[]'); } catch(e){}
+try { activos = JSON.parse(localStorage.getItem('activos_v5')||'[]'); } catch(e){}
 try { scriptUrl = localStorage.getItem('script_url')||''; } catch(e){}
 try { empresa = localStorage.getItem('empresa')||'CONSULCUENCA CIA. LTDA.'; } catch(e){}
 
@@ -337,53 +297,45 @@ window.addEventListener('load', () => {
   if(scriptUrl) document.getElementById('cfg-url').value = scriptUrl;
   document.getElementById('cfg-empresa').value = empresa;
   document.getElementById('empresa-label').textContent = empresa;
-  actualizarDot();
+  if(scriptUrl) setDot(true);
 });
 
-// ── CONFIG ───────────────────────────────────────────────
 function guardarCfg(){
   scriptUrl = document.getElementById('cfg-url').value.trim();
-  empresa   = document.getElementById('cfg-empresa').value.trim() || 'CONSULCUENCA CIA. LTDA.';
+  empresa = document.getElementById('cfg-empresa').value.trim() || 'CONSULCUENCA CIA. LTDA.';
   document.getElementById('empresa-label').textContent = empresa;
   try{ localStorage.setItem('script_url', scriptUrl); localStorage.setItem('empresa', empresa); }catch(e){}
-  actualizarDot();
 }
 
-function actualizarDot(){
-  const dot = document.getElementById('conn-dot');
-  dot.className = 'conn-dot' + (scriptUrl ? '' : '');
-  dot.style.background = scriptUrl ? '#fff' : '#fff';
-  dot.style.opacity = scriptUrl ? '0.7' : '0.3';
+function setDot(ok){
+  const d = document.getElementById('conn-dot');
+  d.className = 'conn-dot' + (ok?' ok':'');
 }
 
 function probarConexion(){
   if(!scriptUrl){ toast('Pega la URL primero','err'); return; }
-  const prog=document.getElementById('cfg-prog'), bar=document.getElementById('cfg-bar');
-  prog.style.display='block'; bar.style.width='0';
-  let w=0; const t=setInterval(()=>{ w=Math.min(w+10,85); bar.style.width=w+'%'; },100);
-  fetch(scriptUrl+'?test=1',{mode:'no-cors'})
-    .then(()=>{
-      clearInterval(t); bar.style.width='100%';
-      setTimeout(()=>{ prog.style.display='none'; },500);
+  const url = scriptUrl + '?accion=ping';
+  fetch(url)
+    .then(r=>r.text())
+    .then(t=>{
       const s=document.getElementById('cfg-status');
       s.className='config-status status-ok';
       s.innerHTML='<i class="ti ti-circle-check"></i> Conexión exitosa con Google Sheets';
-      document.getElementById('conn-dot').style.background='#4ade80';
-      document.getElementById('conn-dot').style.opacity='1';
+      setDot(true);
       toast('¡Conexión exitosa!');
     })
     .catch(()=>{
-      clearInterval(t); prog.style.display='none';
-      const s=document.getElementById('cfg-status');
-      s.className='config-status status-ok';
-      s.innerHTML='<i class="ti ti-circle-check"></i> URL guardada — lista para enviar datos';
-      document.getElementById('conn-dot').style.background='#4ade80';
-      document.getElementById('conn-dot').style.opacity='1';
-      toast('URL guardada correctamente');
+      if(scriptUrl){
+        const s=document.getElementById('cfg-status');
+        s.className='config-status status-ok';
+        s.innerHTML='<i class="ti ti-circle-check"></i> URL guardada — lista para enviar datos';
+        setDot(true);
+        toast('URL guardada correctamente');
+      }
     });
 }
 
-// ── FOTOS ────────────────────────────────────────────────
+// FOTOS
 function agregarFotos(e){
   Array.from(e.target.files).forEach(f=>{
     if(fotosActuales.length>=6){toast('Máximo 6 fotos','err');return;}
@@ -396,15 +348,14 @@ function agregarFotos(e){
 function renderFotos(){
   document.getElementById('fotos-preview').innerHTML=fotosActuales.map((s,i)=>`
     <div class="photo-thumb">
-      <img src="${s}" alt="Foto ${i+1}" onclick="abrirLB('${s}','Foto ${i+1}')"/>
+      <img src="${s}" alt="Foto ${i+1}" onclick="abrirLB('${s}')"/>
       <button class="photo-del" onclick="borrarFoto(${i})">×</button>
       <div class="photo-badge">${i===0?'Principal':i+1}</div>
     </div>`).join('');
 }
 function borrarFoto(i){ fotosActuales.splice(i,1); renderFotos(); }
-
 function abrirCam(){
-  if(!navigator.mediaDevices){toast('Usa la galería en este navegador','err');return;}
+  if(!navigator.mediaDevices){toast('Usa la galería','err');return;}
   navigator.mediaDevices.getUserMedia({video:{facingMode:'environment'}})
     .then(s=>{ streamCam=s; document.getElementById('cam-video').srcObject=s; document.getElementById('cam-wrap').style.display='block'; })
     .catch(()=>toast('No se pudo acceder a la cámara','err'));
@@ -413,11 +364,11 @@ function capturarFoto(){
   const v=document.getElementById('cam-video'),c=document.getElementById('cam-canvas');
   c.width=v.videoWidth; c.height=v.videoHeight;
   c.getContext('2d').drawImage(v,0,0);
-  if(fotosActuales.length<6){ fotosActuales.push(c.toDataURL('image/jpeg',.85)); renderFotos(); }
+  if(fotosActuales.length<6){ fotosActuales.push(c.toDataURL('image/jpeg',.8)); renderFotos(); }
 }
 function cerrarCam(){ if(streamCam){streamCam.getTracks().forEach(t=>t.stop());streamCam=null;} document.getElementById('cam-wrap').style.display='none'; }
 
-// ── GEO ─────────────────────────────────────────────────
+// GEO
 function capturarGeo(){
   if(!navigator.geolocation){toast('GPS no disponible','err');return;}
   navigator.geolocation.getCurrentPosition(p=>{
@@ -429,7 +380,7 @@ function capturarGeo(){
   },err=>toast('GPS: '+err.message,'err'),{enableHighAccuracy:true,timeout:10000});
 }
 
-// ── GUARDAR ──────────────────────────────────────────────
+// GUARDAR — usa GET para compatibilidad con iPhone/Safari
 async function guardarActivo(){
   const codigo=document.getElementById('f-codigo').value.trim();
   const nombre=document.getElementById('f-nombre').value.trim();
@@ -468,27 +419,52 @@ async function guardarActivo(){
   else toast('Guardado localmente — configura la URL para sincronizar');
 }
 
+// ENVÍO POR GET (compatible con Safari/iPhone)
 async function enviarASheets(activo){
   const btn=document.getElementById('btn-guardar');
   const txt=document.getElementById('btn-txt');
   const prog=document.getElementById('save-prog');
   const bar=document.getElementById('save-bar');
-  btn.disabled=true; txt.textContent='Enviando a Google Sheets...';
+  btn.disabled=true; txt.textContent='Enviando...';
   prog.style.display='block'; bar.style.width='0';
   let w=0; const t=setInterval(()=>{ w=Math.min(w+10,80); bar.style.width=w+'%'; },150);
 
-  const payload={...activo}; delete payload.fotos;
-  payload.num_fotos=activo.fotos.length; payload.empresa=empresa;
+  try {
+    // Construir URL con parámetros GET
+    const params = new URLSearchParams({
+      accion:       'guardar',
+      codigo:       activo.codigo,
+      nombre:       activo.nombre,
+      categoria:    activo.categoria,
+      estado:       activo.estado,
+      serie:        activo.serie,
+      marca:        activo.marca,
+      fecha:        activo.fecha,
+      valor:        activo.valor,
+      vida_util:    activo.vida_util,
+      responsable:  activo.responsable,
+      departamento: activo.departamento,
+      ubicacion:    activo.ubicacion,
+      ciudad:       activo.ciudad,
+      lat:          activo.lat,
+      lng:          activo.lng,
+      observaciones:activo.observaciones,
+      num_fotos:    activo.fotos.length,
+      empresa:      empresa
+    });
 
-  try{
-    await fetch(scriptUrl,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+    const url = scriptUrl + '?' + params.toString();
+    const resp = await fetch(url);
+    const texto = await resp.text();
+
     clearInterval(t); bar.style.width='100%';
     setTimeout(()=>{ prog.style.display='none'; bar.style.width='0'; btn.disabled=false; txt.textContent='Guardar y enviar a Google Sheets'; },600);
+
     const a=activos.find(x=>x.codigo===activo.codigo);
     if(a) a.syncStatus='sincronizado';
     salvarLocal();
     toast('✓ Activo enviado a Google Sheets');
-  }catch(err){
+  } catch(err){
     clearInterval(t); prog.style.display='none';
     btn.disabled=false; txt.textContent='Guardar y enviar a Google Sheets';
     const a=activos.find(x=>x.codigo===activo.codigo);
@@ -507,7 +483,14 @@ async function reenviarPendientes(){
   renderInv();
 }
 
-function salvarLocal(){ try{localStorage.setItem('activos_v4',JSON.stringify(activos));}catch(e){} }
+async function reenviarUno(codigo){
+  const a=activos.find(x=>x.codigo===codigo);
+  if(a&&scriptUrl) await enviarASheets(a);
+  else toast('Configura la URL primero','err');
+  renderInv();
+}
+
+function salvarLocal(){ try{localStorage.setItem('activos_v5',JSON.stringify(activos));}catch(e){} }
 
 function limpiarForm(){
   ['f-codigo','f-nombre','f-serie','f-marca','f-responsable','f-departamento','f-obs','f-ubicacion','f-lat','f-lng','f-valor','f-vidautil']
@@ -519,18 +502,18 @@ function limpiarForm(){
   document.getElementById('fotos-preview').innerHTML='';
 }
 
-// ── INVENTARIO ───────────────────────────────────────────
+// INVENTARIO
 function renderInv(){
   const q=(document.getElementById('buscador').value||'').toLowerCase();
   const fil=activos.filter(a=>
     a.nombre.toLowerCase().includes(q)||a.codigo.toLowerCase().includes(q)||
-    (a.departamento||'').toLowerCase().includes(q)||(a.categoria||'').toLowerCase().includes(q)
+    (a.departamento||'').toLowerCase().includes(q)
   );
   const totalVal=activos.reduce((s,a)=>s+(a.valor||0),0);
   const sync=activos.filter(a=>a.syncStatus==='sincronizado').length;
   const pend=activos.filter(a=>a.syncStatus!=='sincronizado').length;
   document.getElementById('st-total').textContent=activos.length;
-  document.getElementById('st-valor').textContent='$'+totalVal.toLocaleString('es-EC',{minimumFractionDigits:0,maximumFractionDigits:0});
+  document.getElementById('st-valor').textContent='$'+totalVal.toLocaleString('es-EC',{minimumFractionDigits:0});
   document.getElementById('st-sync').textContent=sync+'/'+activos.length;
   document.getElementById('btn-resinc').style.display=pend>0?'flex':'none';
 
@@ -541,24 +524,21 @@ function renderInv(){
   }
   const bc=a=>a.estado==='Dado de baja'?'badge-mal':a.estado==='Regular'||a.estado==='En reparación'?'badge-reg':'badge-ok';
   const sc=a=>a.syncStatus==='sincronizado'?'sync-ok':a.syncStatus==='error'?'sync-err':'sync-pend';
-  const sl=a=>a.syncStatus==='sincronizado'?'Sheets ✓':a.syncStatus==='error'?'Error sync':'Pendiente';
+  const sl=a=>a.syncStatus==='sincronizado'?'Sheets ✓':a.syncStatus==='error'?'Error':'Pendiente';
 
   lista.innerHTML=fil.map(a=>`
     <div class="asset-card">
       <div class="asset-photos">
         ${a.fotos&&a.fotos.length
-          ? a.fotos.map((s,i)=>`<div class="asset-photo"><img src="${s}" alt="Foto ${i+1}" onclick="abrirLB('${s}','${a.nombre} — Foto ${i+1}')"/></div>`).join('')
+          ? a.fotos.map((s,i)=>`<div class="asset-photo"><img src="${s}" alt="Foto ${i+1}" onclick="abrirLB('${s}')"/></div>`).join('')
           : '<div class="no-photo"><i class="ti ti-photo-off"></i></div>'}
       </div>
       <div class="asset-body">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:6px;margin-bottom:4px">
-          <div>
-            <div class="asset-name">${a.nombre}</div>
-            <span class="asset-code">${a.codigo}</span>
-          </div>
+          <div><div class="asset-name">${a.nombre}</div><span class="asset-code">${a.codigo}</span></div>
           <div style="display:flex;flex-direction:column;align-items:flex-end;gap:3px">
             <span class="badge ${bc(a)}">${a.estado}</span>
-            <span class="badge ${sc(a)}" style="font-size:10px">${sl(a)}</span>
+            <span class="badge ${sc(a)}">${sl(a)}</span>
           </div>
         </div>
         <div class="asset-meta">
@@ -578,20 +558,13 @@ function renderInv(){
     </div>`).join('');
 }
 
-async function reenviarUno(codigo){
-  const a=activos.find(x=>x.codigo===codigo);
-  if(a&&scriptUrl) await enviarASheets(a);
-  else toast('Configura la URL primero','err');
-  renderInv();
-}
-
 function eliminar(codigo){
   if(!confirm('¿Eliminar '+codigo+'?'))return;
   activos=activos.filter(a=>a.codigo!==codigo);
   salvarLocal(); renderInv();
 }
 
-// ── QR ───────────────────────────────────────────────────
+// QR
 function mostrarQR(activo){
   const wrap=document.getElementById('qr-wrap');
   wrap.innerHTML='';
@@ -601,7 +574,7 @@ function mostrarQR(activo){
   try{
     new QRCode(wrap,{text:url,width:170,height:170,colorDark:'#000',colorLight:'#fff',correctLevel:QRCode.CorrectLevel.H});
     qrCanvas=wrap.querySelector('canvas');
-  }catch(e){ wrap.innerHTML='<div style="font-size:11px;padding:10px">QR no disponible</div>'; }
+  }catch(e){}
   document.getElementById('qr-modal').classList.add('open');
 }
 function dlQR(){
@@ -611,14 +584,11 @@ function dlQR(){
   a.href=qrCanvas.toDataURL('image/png'); a.click();
 }
 
-// ── LIGHTBOX ─────────────────────────────────────────────
-function abrirLB(src,cap){
+function abrirLB(src){
   document.getElementById('lb-img').src=src;
-  document.getElementById('lb-cap').textContent=cap||'';
   document.getElementById('lb').classList.add('open');
 }
 
-// ── EXPORTAR ─────────────────────────────────────────────
 function exportCSV(){
   if(!activos.length){toast('No hay activos','err');return;}
   const cols=['Código','Nombre','Categoría','Estado','Serie','Marca','Fecha','Valor USD','Vida útil','Responsable','Departamento','Ubicación','Ciudad','Latitud','Longitud','Nº Fotos','Observaciones','Registrado','Sync'];
@@ -632,12 +602,10 @@ function exportCSV(){
 
 function abrirFicha(){
   const cod=document.getElementById('preview-cod').value.trim();
-  if(!cod){toast('Escribe un código','err');return;}
-  if(!scriptUrl){toast('Configura la URL primero','err');return;}
+  if(!cod||!scriptUrl){toast('Configura la URL primero','err');return;}
   window.open(scriptUrl+'?codigo='+cod,'_blank');
 }
 
-// ── TOAST ────────────────────────────────────────────────
 function toast(msg,tipo){
   const t=document.getElementById('toast');
   t.textContent=msg;
@@ -646,7 +614,6 @@ function toast(msg,tipo){
   t._t=setTimeout(()=>t.classList.remove('show'),3000);
 }
 
-// ── TABS ─────────────────────────────────────────────────
 function showTab(t){
   ['config','registro','inventario','exportar'].forEach(x=>{
     document.getElementById('tab-'+x).style.display=x===t?'block':'none';
